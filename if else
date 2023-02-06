@@ -1,0 +1,36 @@
+// if else结构
+#define _CRT_SECURE_NO_WARNINGS  1
+#pragma warning(disable:6031)
+#include <stdio.h>//输入输出
+#include <string.h> //字符串处理
+#include <stdlib.h> //内存分配
+//if else 语法结构
+int main()
+{
+	int age = 0;
+	printf("请输入需要判断的年龄\n");
+	scanf("%d", &age);//scanf输入函数从缓冲区读取数据
+	if (age < 18)
+		printf("未成年\n");
+	else
+		printf("成年\n");
+}
+
+//多分支结构
+int main()
+{
+	int age = 0;
+	printf("请输入需要判断的年龄\n");
+	scanf("%d", &age);//scanf输入函数从缓冲区读取数据
+	if (age < 18)
+		printf("未成年\n");
+	else if (18 <= age && age < 28)
+		printf("青年\n");
+	else if (28 <= age && age < 50)
+		printf("壮年\n");
+	else if (50 <= age && age < 100)
+		printf("老年\n");
+	else
+		printf("百岁老人\n");
+    return 0;
+ }
