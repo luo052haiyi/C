@@ -30,7 +30,40 @@ int main()
 		printf("壮年\n");
 	else if (50 <= age && age < 100)
 		printf("老年\n");
-	else
+	else  //最后一个else没有判断语句
 		printf("百岁老人\n");
     return 0;
  }
+ 
+ //条件成立执行多条语句使用代码块
+ int main()
+{
+	int age;
+	printf("请输入要判断的年龄\n");
+	scanf("%d", &age);
+	if (age < 18)
+	{
+		printf("未成年\n");
+		printf("不要早恋好好学习代码\n");  //如果条件成立要执行多条语句，使用代码块{}
+	}
+	else
+	{
+		printf("成年\n");
+	}
+	return 0;
+}
+
+//悬空else
+int main()
+{
+	int a = 1;
+	int b = 2;
+	if (a == 0)
+	{
+		if (b == 2)
+		printf("haha\n");
+	}
+	        else   //else和它离得最近的if配对
+	printf("hehe\n");
+	return 0;
+}
