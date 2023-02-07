@@ -1,0 +1,59 @@
+#define _CRT_SECURE_NO_WARNINGS  1
+#pragma warning(disable:6031)
+#include <stdio.h>//输入输出
+#include <string.h> //字符串处理
+#include <stdlib.h> //内存分配
+//break的介绍
+int main()
+{
+	int i = 1;
+	while (i <= 10)
+	{
+		
+		if (i == 5)
+		{
+			break;              //在循环中只要遇到break，就停止后期的所有循环，直接终止循环
+		}
+			printf("%d\n", i);	
+			i++;
+	}
+  return 0;
+}                         //执行结果为:1 2 3 4
+
+// continue 的介绍
+#define _CRT_SECURE_NO_WARNINGS  1
+#pragma warning(disable:6031)
+#include <stdio.h>//输入输出
+#include <string.h> //字符串处理
+#include <stdlib.h> //内存分配
+
+int main()
+{
+	int i = 1;
+	while (i <= 10)
+	{
+		
+		if (i == 5)
+			continue;           //终止本次循环，也就是本次循环continue后面的代码就不再执行了，而是直接跳到while语句的判断部分，进行下一次循环的入口判断
+			printf("%d\n", i);	
+			i++;
+	}
+  return 0;
+}                       //结果为1 2 3 4 _  ,等待输入
+
+int main()
+{
+	int i = 0;
+	while (i < =10)
+	{
+		i++;
+		if (i == 5)				
+		
+			continue;				//跳过5		
+
+			printf("%d\n", i);
+	}
+  return 0;
+}                     //执行结果为1 2 3 4 6 7 8 9 10 11
+
+ 
