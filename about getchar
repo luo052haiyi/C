@@ -1,0 +1,29 @@
+#define _CRT_SECURE_NO_WARNINGS  1
+#pragma warning(disable:6031)
+#include <stdio.h>//输入输出
+#include <string.h> //字符串处理
+#include <stdlib.h> //内存分配
+
+int main()
+{
+	int ret = 0;
+	char ch = 0;
+	char password[10] = {0};
+	printf("请输入密码\n");
+	scanf("%s", password);       
+	while ((ch = getchar()) != '\n')    //getchar从缓冲区取数据，直到遇到\n跳出循环
+	{
+		;
+	}
+	printf("确认密码:Y/N\n");
+	ret = getchar();
+	if (ret=='Y')
+	{
+		printf("确认成功\n");
+	}
+	else
+	{
+		printf("确认失败\n");
+	}
+  return 0;
+]
