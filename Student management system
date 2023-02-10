@@ -1,0 +1,42 @@
+#include "./student.h"
+ 
+int main(int argc, const char *argv[])
+{
+	//使用结构体之前需要定义一个结构体类型的变量
+ 
+	class_t my_class;//定义一个班级的结构体变量
+	my_class.count = 0;//初始化班级人数
+	int choose = 0;
+	//循环等待客户操作
+	while(1){
+		//打印主菜单
+		print_menu();
+		printf(">>");
+		scanf("%d",&choose);
+		switch(choose){
+			case 1://插入学生
+				insert_student(&my_class);
+				break;
+			case 2://遍历学生
+				print_student(&my_class);
+				break;
+			case 3://修改学生信息（没有学号）
+				xiugai_student(&my_class);
+				break;
+			case 4://删除学生
+				rm_student(&my_class);
+				break;
+			case 5://根据成绩排序
+				PX_student(&my_class);
+				break;
+			case 6://退出系统
+				exit(0);
+				break;
+			default:
+				printf("输入错误，请重新输入\n");
+				break;
+		}
+	
+	}
+	return 0;
+}
